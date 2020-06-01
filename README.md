@@ -1,18 +1,18 @@
-# holman does dotfiles
+# Forking Holman's Dotfiles
 
 Your dotfiles are how you personalize your system. These are mine.
 
-I was a little tired of having long alias files and everything strewn about
-(which is extremely common on other dotfiles projects, too). That led to this
-project being much more topic-centric. I realized I could split a lot of things
-up into the main areas I used (Ruby, git, system libraries, and so on), so I
-structured the project accordingly.
+I was getting tired of having separate configs for macOS, Linux and Windows. 
+These cover my initial setup and configs for cloud shells, local workstations
+and laptops. 
 
-If you're interested in the philosophy behind why projects like these are
-awesome, you might want to [read my post on the
-subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
+Note that this will put homebrew in your profile - this may NOT be what you want
+at all, but is how I get around linuxbrew persistence in cloud shells.
 
-## topical
+The original repo was made for zsh, but there may be a smattering of bash scripts
+here. 
+   
+## Topic-based
 
 Everything's built around topic areas. If you're adding a new area to your
 forked dotfiles — say, "Java" — you can simply add a `java` directory and put
@@ -20,14 +20,14 @@ files in there. Anything with an extension of `.zsh` will get automatically
 included into your shell. Anything with an extension of `.symlink` will get
 symlinked without extension into `$HOME` when you run `script/bootstrap`.
 
-## what's inside
+## What's Inside
 
 A lot of stuff. Seriously, a lot of stuff. Check them out in the file browser
 above and see what components may mesh up with you.
-[Fork it](https://github.com/holman/dotfiles/fork), remove what you don't
+[Fork it](https://github.com/ryanmaclean/dotfiles/fork), remove what you don't
 use, and build on what you do use.
 
-## components
+## Components
 
 There's a few special files in the hierarchy.
 
@@ -45,7 +45,7 @@ There's a few special files in the hierarchy.
   but still keep those autoloaded files in your home directory. These get
   symlinked in when you run `script/bootstrap`.
 
-## install
+## Install
 
 Run this:
 
@@ -66,7 +66,7 @@ defaults, and so on. Tweak this script, and occasionally run `dot` from
 time to time to keep your environment fresh and up-to-date. You can find
 this script in `bin/`.
 
-## bugs
+## Bugs
 
 I want this to work for everyone; that means when you clone it down it should
 work for you even though you may not have `rbenv` installed, for example. That
@@ -77,11 +77,9 @@ If you're brand-new to the project and run into any blockers, please
 [open an issue](https://github.com/holman/dotfiles/issues) on this repository
 and I'd love to get it fixed for you!
 
-## thanks
+## Thanks
 
-I forked [Ryan Bates](http://github.com/ryanb)' excellent
-[dotfiles](http://github.com/ryanb/dotfiles) for a couple years before the
-weight of my changes and tweaks inspired me to finally roll my own. But Ryan's
-dotfiles were an easy way to get into bash customization, and then to jump ship
-to zsh a bit later. A decent amount of the code in these dotfiles stem or are
-inspired from Ryan's original project.
+I forked Holman's dotfiles a while ago and finally got around to adding my local fixes back. 
+It, in turn, was based on [Ryan Bates](http://github.com/ryanb)' excellent
+[dotfiles](http://github.com/ryanb/dotfiles). A decent amount of the code in these dotfiles stem or are
+inspired from Holman and Ryan's original repos.
